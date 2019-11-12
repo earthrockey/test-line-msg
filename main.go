@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/jinzhu/gorm"
 	"github.com/line/line-bot-sdk-go/linebot"
 )
 
