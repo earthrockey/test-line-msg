@@ -1,0 +1,12 @@
+{
+	"ImportPath": "github.com/earthrockey/test-line-msg",
+	"GoVersion": "go1.13",
+	"GodepVersion": "v80",
+	"Deps": [
+		{
+			"ImportPath": "github.com/line/line-bot-sdk-go/linebot",
+			"Comment": "v6.4.0-1-g1913b75",
+			"Rev": "1913b75f7606151ccad6c8a9ee0ceabe025fca4a"
+		}
+	]
+}
