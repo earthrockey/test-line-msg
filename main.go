@@ -30,7 +30,19 @@ func getPort() string {
 }
 
 func main() {
+	db := DbConn()
+	defer db.Close()
 	HandleRequest()
+}
+
+func DbConn() (db *gorm.DB) {
+	// db, err := gorm.Open("mysql", "root:e575g73wk@/gosensorproject?charset=utf8&parseTime=True&loc=Local")
+	db, err := gorm.Open("mysql", "root:Pid1ajYUDJ@tcp(128.199.216.169:3306)/gosensorproject?charset=utf8&parseTime=True&loc=Local")
+	// db, err := gorm.Open("mysql", "root:Pid1ajYUDJ@tcp(172.17.0.2:3306)/gosensorproject?charset=utf8&parseTime=True&loc=Local")
+	if err != nil {
+		panic(err.Error())
+	}
+	return db
 }
 
 func connectLineBot() *linebot.Client {
